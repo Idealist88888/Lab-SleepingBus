@@ -6,8 +6,29 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Add"  Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FF1F1B1B" >
+        <!--{ThemeResource ApplicationPageBackgroundThemeBrush}-->
+            <Grid.RowDefinitions>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="527*"/>
+        </Grid.RowDefinitions>
 
+        <Grid Grid.Row="1" Background="Black"/>
+        <!--<ScrollViewer HorizontalAlignment="Left" Height="100" Margin="113,115,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100"/>-->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+            <StackPanel x:Name="Alarms_List" />
+        </ScrollViewer>
+        <Viewbox HorizontalAlignment="Left" Margin="10">
+            <TextBlock TextWrapping="Wrap" Text="Sleeping Bus" FontFamily="Yu Gothic UI Light" Foreground="WhiteSmoke"/>
+        </Viewbox>
     </Grid>
 </Page>
