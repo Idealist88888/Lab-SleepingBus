@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="@string/NewAlarm"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tVNewAlarm"
+        android:textStyle="bold"
+        android:gravity="center" />
+    <SearchView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchView"
+        android:clickable="true"
+        android:focusable="true" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="249.5dp"
+        android:id="@+id/listView" />
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="163.5dp"
+        android:id="@+id/scrollView1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="155.5dp"
+            android:id="@+id/linearLayout1">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/BtnDistance"
+                android:text="@string/Distance" />
+            <Button
+                android:text="@string/Repeats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/BtnRepeats" />
+            <Button
+                android:text="@string/Sound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/BtnSound" />
+            <CheckBox
+                android:text="@string/Vibration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/CbVibration"
+                android:gravity="center"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

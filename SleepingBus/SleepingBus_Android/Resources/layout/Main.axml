@@ -3,11 +3,41 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-<Button  
-    android:id="@+id/MyButton"
-    android:layout_width="match_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/Hello"
-    />
+    android:minWidth="25px"
+    android:id="@+id/linearLayoutMain"
+    android:minHeight="25px">
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="442.0dp"
+        android:id="@+id/scrollView1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="442.0dp"
+            android:id="@+id/LRLayout">
+            <ListView
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listView" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="105.0dp"
+        android:id="@+id/LinerLBottom">
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/AddBtn"
+            android:layout_gravity="center" />
+    </LinearLayout>
 </LinearLayout>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">SleepingBus_Android</string>
+  <string name="ApplicationName">SleepingBus_Android</string>
+  <string name="NewAlarm">Новый будильник</string>
+  <string name="Distance">Расстояние</string>
+  <string name="Repeats">Повторение</string>
+  <string name="Vibration">Вибрация</string>
+  <string name="Sound">Мелодия</string>
 </resources>
