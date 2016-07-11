@@ -1,0 +1,48 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SleepingBus_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="SleepingBus_UWP.newAlarmPage"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Accept"/>
+            <AppBarButton Icon="Cancel" Click="Cancel_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="248*"/>
+            <RowDefinition Height="349*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FF1F1B1B">
+            <TextBlock TextWrapping="Wrap" Text="New Alarm" FontSize="24" Margin="10,0,0,0"/>
+        </Grid>
+
+        <Maps:MapControl Grid.Row="1"/>
+        <ScrollViewer Grid.Row="2">
+            <StackPanel Grid.Row="2">
+                <TextBlock Text="Select place" FontSize="22" Margin="10"/>
+                <Button Content="Select" Margin="10,0,0,0"/>
+                <TextBlock Text="Repeats" FontSize="22" Margin="10"/>
+                <Button Content="Press" Margin="10,0,0,0"/>
+                <TextBlock Text="Sound" FontSize="22" Margin="10"/>
+                <Button Content="Press" Margin="10,0,0,0"/>
+                <TextBlock Text="Tracking distance (m)" FontSize="22" Margin="10"/>
+                <TextBox Margin="10,0,10,0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Page>

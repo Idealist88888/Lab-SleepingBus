@@ -60,6 +60,7 @@ namespace SleepingBus_UWP
                 FontSize = 36,
                 Foreground= new SolidColorBrush(Colors.White)
             };
+            //Grid.SetColumnSpan(_Alarm_Name, 2);
             TextBlock _Distance_Block = new TextBlock()
             {
                 HorizontalAlignment = HorizontalAlignment.Left,
@@ -100,6 +101,8 @@ namespace SleepingBus_UWP
             _Grid_For_Alarm.Children.Add(_Stop_Name);
 
             Alarms_List.Children.Add(_Grid_For_Alarm);
+
+            this.Frame.Navigate(typeof(newAlarmPage));
         }
     }
 }
