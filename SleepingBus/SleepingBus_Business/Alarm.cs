@@ -8,90 +8,32 @@ namespace SleepingBus_Business
 {
     class Alarm
     {
-        int sound;
-        public int Sound
+        public int Sound { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public string NameStation { get; set; }
+        public string NameCity { get; set; }
+
+        public int Distance { get; set; }
+
+        double destinationDistance;
+        public double DestinationDistance
         {
             get
             {
-                return sound;
+                return destinationDistance;
             }
 
             set
             {
-                sound = value;
+                destinationDistance = value;
             }
         }
 
-        int location;
-        public int Location
-        {
-            get
-            {
-                return location;
-            }
+        public bool Vibration { get; set; }
+        public bool IsAlarming { get; set; }
 
-            set
-            {
-                location = value;
-            }
-        }
-
-        string nameLocation;
-        public string NameLocation
-        {
-            get
-            {
-                return nameLocation;
-            }
-
-            set
-            {
-                nameLocation = value;
-            }
-        }
-
-        int distance;
-        public int Distance
-        {
-            get
-            {
-                return distance;
-            }
-
-            set
-            {
-                distance = value;
-            }
-        }
-
-        bool vibration;
-        public bool Vibration
-        {
-            get
-            {
-                return vibration;
-            }
-
-            set
-            {
-                vibration = value;
-            }
-        }
-
-        bool repeats;
-        public bool Repeats
-        {
-            get
-            {
-                return repeats;
-            }
-
-            set
-            {
-                repeats = value;
-            }
-        }
-
+        public bool Repeats { get; set; }
 
     }
 }
