@@ -30,7 +30,7 @@
             <TextBlock TextWrapping="Wrap" Text="New Alarm" FontSize="24" Margin="10,0,0,0"/>
         </Grid>
 
-        <Maps:MapControl Grid.Row="1"/>
+        <Maps:MapControl x:Name="stopMap" Grid.Row="1"/>
         <ScrollViewer Grid.Row="2">
             <StackPanel Grid.Row="2">
                 <TextBlock Text="Select place" FontSize="22" Margin="10"/>
