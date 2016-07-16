@@ -4,17 +4,19 @@ using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SleepingBus_Business;
 using Android.OS;
 using Java.Lang;
 
 namespace SleepingBus_Android
 {
-    [Activity(Label = "SleepingBus_Android", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "SleepingBus", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity, IRunnable
     {
         ImageButton ImgBtn;
         LinearLayout LinerLayoutAlarm;
-        ListView alarmlistView;
+      
+
         const int AlarmImage = 120;
 
         protected override void OnCreate(Bundle bundle)
@@ -24,32 +26,29 @@ namespace SleepingBus_Android
             LinerLayoutAlarm = FindViewById<LinearLayout>(Resource.Id.LRLayout);
             ImgBtn = FindViewById<ImageButton>(Resource.Id.AddBtn);
 
-            alarmlistView = FindViewById<ListView>(Resource.Id.listView);
-            alarmlistView.LongClick += ListView_LongClick;
-
-
-
+            //for (int i = 0; i < AppMemory.AlarmList.Count; i++)
+              //  LinerLayoutAlarm.AddView(ShowAlarm(AppMemory.AlarmList[i].NameCity, AppMemory.AlarmList[i].NameStation, i, AppMemory.AlarmList[i].Distance));
+            
 
             ImgBtn.Click += ImgBtn_Click;
 
             ImgBtn.SetBackgroundResource(Resource.Drawable.add);
+            AppMemory.AlarmList = new System.Collections.Generic.List<Alarm>();
 
 
         }
 
-        private void ListView_LongClick(object sender, Android.Views.View.LongClickEventArgs e)
-        {
-
-        }
-
-        #region ADDPlus
+        #region ImgBtn_Click
         private void ImgBtn_Click(object sender, EventArgs e)
         {
             ImgBtn.SetBackgroundResource(Resource.Drawable.ADD4);
             ImgBtn.PostDelayed(new Runnable(this.Run), 100);
+            AppMemory.AlarmList.Add(new Alarm() { Distance = 1555, NameCity = "Смоленск", NameStation = "Румянцева" });
+            for (int i = AppMemory.AlarmList.Count -1; i < AppMemory.AlarmList.Count; i++)
+                LinerLayoutAlarm.AddView(ShowAlarm(AppMemory.AlarmList[i].NameCity, AppMemory.AlarmList[i].NameStation, i, AppMemory.AlarmList[i].Distance));
+
 
         }
-
 
         public void Run()
         {
@@ -58,7 +57,7 @@ namespace SleepingBus_Android
         }
         #endregion
 
-        private RelativeLayout ShowAlarm()
+        private RelativeLayout ShowAlarm(string NameCity, string NameStation, int index, double Distance )
         {
             #region Layout Kod /*...*/
             /*<RelativeLayout
@@ -128,7 +127,7 @@ namespace SleepingBus_Android
             paramtextCity.MarginStart = AlarmImage + 20;
             paramtextCity.TopMargin = 10;
             textCity.TextSize = 26;
-            textCity.Text = "Россия, Москва";
+            textCity.Text = NameCity;
             textCity.LayoutParameters = paramtextCity;
             #endregion
 
@@ -138,7 +137,7 @@ namespace SleepingBus_Android
             paramtextBus.MarginStart = AlarmImage + 20;
             paramtextBus.AddRule(LayoutRules.CenterVertical);
             paramtextBus.BottomMargin = 10;
-            textBus.Text = "Останкино 24";
+            textBus.Text = NameStation;
             textBus.TextSize = 20;
             textBus.LayoutParameters = paramtextBus;
             #endregion
@@ -149,7 +148,7 @@ namespace SleepingBus_Android
             paramtextDistance.AddRule(LayoutRules.AlignParentBottom);
             paramtextDistance.MarginStart = AlarmImage + 20;
             paramtextDistance.BottomMargin = 20;
-            textDistance.Text = "1324м";
+            textDistance.Text = Distance.ToString();
             textDistance.TextSize = 20;
             textDistance.LayoutParameters = paramtextDistance;
             #endregion
@@ -162,9 +161,9 @@ namespace SleepingBus_Android
             RelativLayout.AddView(textCity);
             RelativLayout.AddView(textBus);
             RelativLayout.AddView(textDistance);
+            RelativLayout.Tag = index;
             #endregion
-
-
+            
             return RelativLayout;
         }
     }

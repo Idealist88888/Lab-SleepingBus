@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SleepingBus_Business
 {
-    class Alarm
+    public class Alarm
     {
         public int Sound { get; set; }
         public double X { get; set; }
@@ -14,26 +14,11 @@ namespace SleepingBus_Business
         public string NameStation { get; set; }
         public string NameCity { get; set; }
 
-        public int Distance { get; set; }
-
-        double destinationDistance;
-        public double DestinationDistance
-        {
-            get
-            {
-                return destinationDistance;
-            }
-
-            set
-            {
-                destinationDistance = value;
-            }
-        }
-
+        public double Distance { get; set; }        
         public bool Vibration { get; set; }
-        public bool IsAlarming { get; set; }
+        public bool IsOn { get; set; }
 
-        public bool Repeats { get; set; }
+        public bool[] Repeats { get; set; }
 
     }
 }

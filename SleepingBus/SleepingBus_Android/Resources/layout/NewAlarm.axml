@@ -11,19 +11,11 @@
         android:id="@+id/tVNewAlarm"
         android:textStyle="bold"
         android:gravity="center" />
-    <SearchView
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/searchView"
-        android:clickable="true"
-        android:focusable="true" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="249.5dp"
+        android:layout_height="301.0dp"
         android:id="@+id/listView" />
     <ScrollView
         android:minWidth="25px"
@@ -36,29 +28,55 @@
             android:layout_width="match_parent"
             android:layout_height="155.5dp"
             android:id="@+id/linearLayout1">
-            <Button
-                android:layout_width="match_parent"
+            <TextView
+                android:text="Выбрать место"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/BtnDistance"
-                android:text="@string/Distance" />
+                android:id="@+id/TextSelectPlace" />
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/BtnSelectPlace"
+                android:text="Выбрать" />
+            <TextView
                 android:text="@string/Repeats"
-                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextRepeats" />
+            <Button
+                android:text="Нажмите"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/BtnRepeats" />
-            <Button
+            <TextView
                 android:text="@string/Sound"
-                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextSound" />
+            <Button
+                android:text="Нажмите"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/BtnSound" />
+            <TextView
+                android:text="@string/Distance"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextDistance" />
+            <EditText
+                android:layout_width="286.5dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextDistance" />
             <CheckBox
                 android:text="@string/Vibration"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/CbVibration"
-                android:gravity="center"
-                android:layout_marginLeft="120dp"
-                android:layout_marginRight="120dp" />
+                android:gravity="center" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

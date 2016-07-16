@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="ApplicationName">SleepingBus_Android</string>
+  <string name="ApplicationName">SleepingBus</string>
   <string name="NewAlarm">Новый будильник</string>
-  <string name="Distance">Расстояние</string>
+  <string name="Distance">Расстояние оповещения (м)</string>
   <string name="Repeats">Повторение</string>
   <string name="Vibration">Вибрация</string>
   <string name="Sound">Мелодия</string>
