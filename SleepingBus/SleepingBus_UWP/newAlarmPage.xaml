@@ -14,6 +14,7 @@
             </CommandBar.Content>
             <AppBarButton Icon="Accept"/>
             <AppBarButton Icon="Cancel" Click="Cancel_Click"/>
+            <AppBarButton Icon="Map" Click="fullScreenMap_Click" />
         </CommandBar>
     </Page.BottomAppBar>
 
@@ -30,11 +31,25 @@
             <TextBlock TextWrapping="Wrap" Text="New Alarm" FontSize="24" Margin="10,0,0,0"/>
         </Grid>
 
-        <Maps:MapControl x:Name="stopMap" Grid.Row="1"/>
-        <ScrollViewer Grid.Row="2">
+
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Hidden">
             <StackPanel Grid.Row="2">
-                <TextBlock Text="Select place" FontSize="22" Margin="10"/>
-                <Button Content="Select" Margin="10,0,0,0"/>
+                <TextBlock x:Name="Place_TextBlock" Text="Select place" FontSize="22" Margin="10"/>
+                <Button Content="Select" Margin="10,0,0,0">
+                    <Button.Flyout>
+                        <Flyout>
+                            <Grid>
+                                <StackPanel>
+                                    <TextBlock  Text="Input"/>
+                                    <TextBox x:Name="adressInput" AcceptsReturn="True" KeyUp="adressInput_KeyUp" AutomationProperties.AccessibilityView="Raw" UseSystemFocusVisuals="True"/>
+                                    <Button x:Name="btnOk" Content="OK" Click="btnOk_Click" />
+                                    
+                                        <ListView x:Name="locationsList"/>
+                                </StackPanel>
+                            </Grid>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
                 <TextBlock Text="Repeats" FontSize="22" Margin="10"/>
                 <Button Content="Press" Margin="10,0,0,0"/>
                 <TextBlock Text="Sound" FontSize="22" Margin="10"/>
@@ -43,6 +58,6 @@
                 <TextBox Margin="10,0,10,0"/>
             </StackPanel>
         </ScrollViewer>
-
+        <Maps:MapControl x:Name="stopMap" Grid.Row="1" MapTapped="stopMap_MapTapped"/>
     </Grid>
 </Page>
