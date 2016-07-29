@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Device.Location;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -18,13 +17,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Шаблон элемента пустой страницы задокументирован по адресу http://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace SleepingBus_UWP
 {
-    /// <summary>
-    /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
-    /// </summary>
     public sealed partial class newAlarmPage : Page
     {
         public newAlarmPage()
@@ -62,17 +56,17 @@ namespace SleepingBus_UWP
             mapIcon.Title = "You are here";
             stopMap.MapElements.Add(mapIcon);
         }
-        void gcw_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
-        {
+        //void gcw_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
+        //{
 
-            BasicGeoposition BG = new BasicGeoposition();
+        //    BasicGeoposition BG = new BasicGeoposition();
 
-            BG.Latitude = e.Position.Location.Latitude;
-            BG.Longitude = e.Position.Location.Longitude;
+        //    BG.Latitude = e.Position.Location.Latitude;
+        //    BG.Longitude = e.Position.Location.Longitude;
 
-            Geopoint meOnMap = new Geopoint(BG);
-            stopMap.Center = meOnMap;
-        }
+        //    Geopoint meOnMap = new Geopoint(BG);
+        //    stopMap.Center = meOnMap;
+        //}
 
         private async void stopMap_MapTapped(MapControl sender, MapInputEventArgs args)
         {
@@ -119,7 +113,6 @@ namespace SleepingBus_UWP
                 List<TextBlock> locations = new List<TextBlock>();
                 foreach (MapLocation mapLocation in result.Locations)
                 {
-
                     // Создаем отображаемую строку местоположения на карте
                     string display = mapLocation.Address.StreetNumber + " " +
                       mapLocation.Address.Street + Environment.NewLine +

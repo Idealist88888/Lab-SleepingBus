@@ -98,8 +98,8 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="newAlarmPage.xaml.cs">
-      <DependentUpon>newAlarmPage.xaml</DependentUpon>
+    <Compile Include="NewAlarmPage.xaml.cs">
+      <DependentUpon>NewAlarmPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -118,7 +118,6 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Content Include="System.Device.dll" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -129,7 +128,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="newAlarmPage.xaml">
+    <Page Include="NewAlarmPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,6 +138,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\knpre\Desktop\System.Device.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SleepingBus_Business\SleepingBus_Business.csproj">
+      <Project>{9252c579-da35-465c-a324-ddbc4d858214}</Project>
+      <Name>SleepingBus_Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
