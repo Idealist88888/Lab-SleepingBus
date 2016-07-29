@@ -103,7 +103,6 @@ namespace SleepingBus_Android
           </RelativeLayout>*/
             #endregion
 
-
             #region ToggleBtn
             Switch ToggleBtn = new Switch(this);
             RelativeLayout.LayoutParams paramToggleBtn = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WrapContent, RelativeLayout.LayoutParams.WrapContent);

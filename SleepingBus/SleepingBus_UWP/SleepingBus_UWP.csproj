@@ -134,12 +134,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Device, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\knpre\Desktop\System.Device.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SleepingBus_Business\SleepingBus_Business.csproj">
       <Project>{9252c579-da35-465c-a324-ddbc4d858214}</Project>
       <Name>SleepingBus_Business</Name>
