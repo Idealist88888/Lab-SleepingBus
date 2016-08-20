@@ -42,8 +42,7 @@
                                 <StackPanel>
                                     <TextBlock  Text="Input"/>
                                     <TextBox x:Name="adressInput" AcceptsReturn="True" KeyUp="adressInput_KeyUp" AutomationProperties.AccessibilityView="Raw" UseSystemFocusVisuals="True"/>
-                                    <Button x:Name="btnOk" Content="OK" Click="btnOk_Click" />
-                                    
+                                    <Button Content="OK" Click="BtnOk_Click"/>                                    
                                         <ListView x:Name="locationsList"/>
                                 </StackPanel>
                             </Grid>
