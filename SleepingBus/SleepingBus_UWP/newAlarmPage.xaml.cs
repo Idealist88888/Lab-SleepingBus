@@ -56,17 +56,6 @@ namespace SleepingBus_UWP
             mapIcon.Title = "You are here";
             stopMap.MapElements.Add(mapIcon);
         }
-        //void gcw_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
-        //{
-
-        //    BasicGeoposition BG = new BasicGeoposition();
-
-        //    BG.Latitude = e.Position.Location.Latitude;
-        //    BG.Longitude = e.Position.Location.Longitude;
-
-        //    Geopoint meOnMap = new Geopoint(BG);
-        //    stopMap.Center = meOnMap;
-        //}
 
         private async void stopMap_MapTapped(MapControl sender, MapInputEventArgs args)
         {
