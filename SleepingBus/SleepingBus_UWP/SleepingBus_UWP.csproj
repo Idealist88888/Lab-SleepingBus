@@ -98,6 +98,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewAlarmController.cs" />
     <Compile Include="NewAlarmPage.xaml.cs">
       <DependentUpon>NewAlarmPage.xaml</DependentUpon>
     </Compile>
